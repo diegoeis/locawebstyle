@@ -1,10 +1,13 @@
 CACHE MANIFEST
-# Version 19
+# Version 20
 
 CACHE:
 /locawebstyle/assets/javascripts/libs/jquery-2.1.0.min.js
 /locawebstyle/assets/javascripts/locastyle.js
 /locawebstyle/assets/stylesheets/locastyle.css
+
+NETWORK:
+*
 
 FALLBACK:
 # /locawebstyle/assets/stylesheets/fonts/locastyle.woff /locawebstyle/assets/stylesheets/fonts/locastyle.woff
