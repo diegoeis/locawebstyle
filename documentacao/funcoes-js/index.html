@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="ls-theme-green documentacao documentacao_funcoes-js documentacao_funcoes-js_index">
+<head>
+  <meta charset="UTF-8">
+  <title>Iniciando as funções JS</title>
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+  <meta name="description" content="Inicie as funções JS do Locaweb Style quando necessário" />
+  <meta name="keywords" content="" />
+  <script src="../../assets/javascripts/libs/mediaqueries-ie.js" type="text/javascript"></script><script src="../../assets/javascripts/libs/html5shiv.js" type="text/javascript"></script>
+
+  <link href="../../assets/stylesheets/docs.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="/locawebstyle/assets/stylesheets/locastyle.css">
+
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-41233562-1', 'auto');
+    ga('send', 'pageview');
+
+  </script>
+</head>
+<body>
+
+
+<header class="doc-header container">
+  <nav class="doc-menu">
+  <span class="sandwich"></span>
+  <ul>
+    <li><a href="/locawebstyle">Home</a></li>
+    <li><a href="/locawebstyle/documentacao/introducao/">Documentação</a></li>
+    <li><a href="/locawebstyle/documentacao/introducao/boilerplate/">Comece por aqui</a></li>
+    <li><a href="https://github.com/locaweb/locawebstyle/releases">Changelog</a></li>
+    <li><a href="http://locaweb.github.io/locawebstyle-v1/">Documentação V1</a></li>
+    <li><a href="http://locaweb.github.io/locawebstyle-v2/">Documentação V2</a></li>
+  </ul>
+</nav>
+
+  <h1 class="doc-logo"><a href="/locawebstyle/"><strong>Locaweb</strong> Style</a></h1>
+</header>
+
+<div class="doc-title-intro">
+  <div class="container">
+    <h1>Documentação</h1>
+    <p>Saiba todas as features que te ajudarão a produzir sistemas mais rapidamente.</p>
+  </div>
+</div>
+
+<nav class="doc-menu-top">
+  <div class="container">
+    <ul>
+      <li class=''><a class='' href='/locawebstyle/documentacao/introducao/'>Introdução</a></li>
+      <li class=''><a class='' href='/locawebstyle/documentacao/css/grid/'>CSS</a></li>
+      <li class='active'><a class='active' href='/locawebstyle/documentacao/funcoes-js/'>Funções JS</a></li>
+      <li class=''><a class='' href='/locawebstyle/documentacao/componentes/'>Componentes</a></li>
+      <li class=''><a class='' href='/locawebstyle/documentacao/formularios/'>Formulários</a></li>
+      <li class=''><a class='' href='/locawebstyle/documentacao/exemplos/'>Telas de Exemplo</a></li>
+      <li class=''><a class='' href='/locawebstyle/documentacao/cartilha-de-elementos/'>Cartilha de Elementos</a></li>
+    </ul>
+  </div>
+</nav>
+
+
+<div class="doc-content container">
+  <div class="row">
+    <aside class="doc-sidebar col-md-3">
+<div class="doc-sidebar-inner">
+  <nav class="doc-sidebar-menu">
+    <ul>
+      <li class='active'><a class='active' href='/locawebstyle/documentacao/funcoes-js/'>Iniciando Funções JS (ajax)</a></li>
+      <li class=''><a class='' href='/locawebstyle/documentacao/funcoes-js/alternar-classes/'>Alternar Classes</a></li>
+      <li class=''><a class='' href='/locawebstyle/documentacao/funcoes-js/alternar-textos/'>Alternar textos</a></li>
+      <li class=''><a class='' href='/locawebstyle/documentacao/funcoes-js/rastreando-eventos/'>Track Eventos do GA</a></li>
+      <li class=''><a class='' href='/locawebstyle/documentacao/funcoes-js/dismiss/'>Dismiss</a></li>
+      <li class=''><a class='' href='/locawebstyle/documentacao/funcoes-js/auto-trigger/'>Clique automático</a></li>
+    </ul>
+  </nav>
+</div>
+</aside>
+
+
+<section class="col-md-9">
+
+  <div class="doc-intro-content">
+  <h1>Iniciando as funções JS</h1>
+  <p>Inicie as funções JS do Locaweb Style quando necessário</p>
+</div>
+
+
+  <p>Cada módulo JavaScript do Locaweb Style é iniciado individualmente caso nosso script detecte a presença do componente na página. Essa inicialização é feita automaticamente e você não precisa se preocupar com isso em ambientes normais.<br>
+  Mas há momentos que você precisa reiniciar esse os módulos em ocasiões quando o DOM é modificado ou você está fazendo uma requisição AJAX e precisa que o componente seja executado novamente. Para tanto, você poderá inicar os módulos manualmente quando necessário.</p>
+
+  <h2 class="doc-title-3">Iniciando os módulos</h2>
+  <p>Funciona assim: para iniciar um módulo use a seguinte chamada: <code>locastyle.nome_do_modulo.init()</code>.<br>
+  O exemplo abaixo inicia a nossa função de modal:</p>
+
+<div class="highlight javascript"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4</pre></td><td class="code"><pre>  <span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="c1">// Inicia a função de Modal manualmente</span>
+    <span class="nx">locastyle</span><span class="p">.</span><span class="nx">modal</span><span class="p">.</span><span class="nx">init</span><span class="p">();</span>
+  <span class="p">})();</span>
+</pre></td></tr></tbody></table>
+</div>
+
+  <p>Se você quiser iniciar todos os componentes do Locastyle, basta chamar a função: <code>locastyle.init();</code>. <br>
+  Isso vai iniciar todos os módulos que estão sendo utilizados na página em que foi executada.</p>
+
+  <p>Abaixo segue a listagem dos nomes dos nossos componentes. Você pode ver isso também <a href="https://github.com/locaweb/locawebstyle/tree/master/source/assets/javascripts/locastyle">em cada um dos arquivos JS listados aqui</a>.</p>
+  <table class="ls-table">
+    <thead>
+      <tr>
+        <th>Nome do Módulo</th>
+        <th>Função</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a href="http://locaweb.github.io/locawebstyle/documentacao/componentes/alertas/">Alerts</a></td>
+        <td>locastyle.alert.init()</td>
+      </tr>
+      <tr>
+        <td><a href="http://locaweb.github.io/locawebstyle/documentacao/componentes/">Abas</a></td>
+        <td>locastyle.tabs.init()</td>
+      </tr>
+      <tr>
+        <td><a href="http://locaweb.github.io/locawebstyle/documentacao/componentes/barra-de-progresso/">Barra de Progresso</a></td>
+        <td>locastyle.progressBar.init()</td>
+      </tr>
+      <tr>
+        <td><a href="http://locaweb.github.io/locawebstyle/documentacao/componentes/collapse/">Collapse e Accordeon</a></td>
+        <td>locastyle.collapse.init()</td>
+      </tr>
+      <tr>
+        <td><a href="http://locaweb.github.io/locawebstyle/documentacao/componentes/dropdown/">Dropdown</a></td>
+        <td>locastyle.dropdown.init()</td>
+      </tr>
+      <tr>
+        <td><a href="http://locaweb.github.io/locawebstyle/documentacao/componentes/modal/">Modal</a></td>
+        <td>locastyle.modal.init()</td>
+      </tr>
+      <tr>
+        <td><a href="http://locaweb.github.io/locawebstyle/documentacao/componentes/popover/">Popover</a></td>
+        <td>locastyle.popover.init()</td>
+      </tr>
+      <tr>
+        <td><a href="http://locaweb.github.io/locawebstyle/documentacao/formularios/contador/">Contador de Caractéres</a></td>
+        <td>locastyle.charCounter.init()</td>
+      </tr>
+      <tr>
+        <td><a href="http://locaweb.github.io/locawebstyle/documentacao/componentes/tour-guiado/">Tour Guiado</a></td>
+        <td>locastyle.guidedTour.init()</td>
+      </tr>
+      <tr>
+        <td><a href="http://locaweb.github.io/locawebstyle/documentacao/funcoes-js/dismiss/">Dismiss</a></td>
+        <td>locastyle.dismiss.init()</td>
+      </tr>
+    </tbody>
+  </table>
+
+
+
+</section>
+
+  </div>
+</div>
+
+<footer class="doc-footer">
+  <div class="container">
+   <ul class="doc-social-link">
+      <!-- <li> <a href="" class="doc-social-facebook">facebook</a> </li> -->
+      <li> <a target="_blank" class="doc-social-twitter" href="http://twitter.com/locawebdevnet">twitter</a> </li>
+    </ul>
+    <a href="http://locaweb.com.br/" class="doc-logo-footer"><img src="/locawebstyle/assets/images/docs/locaweb-logo.png" alt=""></a>
+    <p class="doc-copyright">
+      Copyright © 1997-2015 Serviços de Internet S/A.
+    </p>
+  </div>
+</footer>
+
+<script src="../../assets/javascripts/libs/jquery-2.1.0.min.js" type="text/javascript"></script><script src="../../assets/javascripts/locastyle.js" type="text/javascript"></script><script src="../../assets/javascripts/docs.js" type="text/javascript"></script>
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-51cdc3552ecf7080"></script>
+</body>
+</html>
+
