@@ -1,0 +1,24 @@
+CACHE MANIFEST
+# Version 10
+
+CACHE:
+/locawebstyle/assets/javascripts/libs/jquery-2.1.0.min.js
+/locawebstyle/assets/javascripts/locastyle.js
+/locawebstyle/assets/stylesheets/locastyle.css
+/locawebstyle/assets/stylesheets/fonts/locastyle.woff
+/locawebstyle/assets/stylesheets/fonts/locastyle.ttf
+# /locawebstyle/assets/stylesheets/fonts/locastyle.svg
+/locawebstyle/assets/stylesheets/fonts/locastyle-panel-icons.ttf
+/locawebstyle/assets/stylesheets/fonts/locastyle-panel-icons.woff
+# /locawebstyle/assets/stylesheets/fonts/locastyle-panel-icons.svg
+
+NETWORK:
+*
+
+FALLBACK:
+/locawebstyle/assets/stylesheets/fonts/locastyle.woff /locawebstyle/assets/stylesheets/fonts/locastyle.woff
+/locawebstyle/assets/stylesheets/fonts/locastyle.ttf /locawebstyle/assets/stylesheets/fonts/locastyle.ttf
+# /locawebstyle/assets/stylesheets/fonts/locastyle.svg /locawebstyle/assets/stylesheets/fonts/locastyle.svg
+/locawebstyle/assets/stylesheets/fonts/locastyle-panel-icons.ttf /locawebstyle/assets/stylesheets/fonts/locastyle-panel-icons.ttf
+/locawebstyle/assets/stylesheets/fonts/locastyle-panel-icons.woff /locawebstyle/assets/stylesheets/fonts/locastyle-panel-icons.woff
+# /locawebstyle/assets/stylesheets/fonts/locastyle-panel-icons.svg /locawebstyle/assets/stylesheets/fonts/locastyle-panel-icons.svg
