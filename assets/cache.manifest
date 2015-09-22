@@ -1,13 +1,15 @@
 CACHE MANIFEST
-# Version 15
+# Version 18
 
-NETWORK:
-*
+CACHE:
+/assets/javascripts/libs/jquery-2.1.0.min.js
+/assets/javascripts/locastyle.js
+/assets/stylesheets/locastyle.css
 
 FALLBACK:
-# /locawebstyle/assets/stylesheets/fonts/locastyle.woff /locawebstyle/assets/stylesheets/fonts/locastyle.woff
-/locawebstyle/assets/stylesheets/fonts/locastyle.ttf /locawebstyle/assets/stylesheets/fonts/locastyle.ttf
-# /locawebstyle/assets/stylesheets/fonts/locastyle.svg /locawebstyle/assets/stylesheets/fonts/locastyle.svg
-/locawebstyle/assets/stylesheets/fonts/locastyle-panel-icons.ttf /locawebstyle/assets/stylesheets/fonts/locastyle-panel-icons.ttf
-/locawebstyle/assets/stylesheets/fonts/locastyle-panel-icons.woff /locawebstyle/assets/stylesheets/fonts/locastyle-panel-icons.woff
-# /locawebstyle/assets/stylesheets/fonts/locastyle-panel-icons.svg /locawebstyle/assets/stylesheets/fonts/locastyle-panel-icons.svg
+# /assets/stylesheets/fonts/locastyle.woff /assets/stylesheets/fonts/locastyle.woff
+/assets/stylesheets/fonts/locastyle.ttf /assets/stylesheets/fonts/locastyle.ttf
+# /assets/stylesheets/fonts/locastyle.svg /assets/stylesheets/fonts/locastyle.svg
+/assets/stylesheets/fonts/locastyle-panel-icons.ttf /assets/stylesheets/fonts/locastyle-panel-icons.ttf
+/assets/stylesheets/fonts/locastyle-panel-icons.woff /assets/stylesheets/fonts/locastyle-panel-icons.woff
+# /assets/stylesheets/fonts/locastyle-panel-icons.svg /assets/stylesheets/fonts/locastyle-panel-icons.svg
